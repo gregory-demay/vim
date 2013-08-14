@@ -4,3 +4,6 @@
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/atp-vim"]
+	path = bundle/atp-vim
+	url = git://git.code.sf.net/p/atp-vim/code

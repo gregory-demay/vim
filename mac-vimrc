@@ -5,3 +5,12 @@ execute pathogen#infect()
 
 syntax on
 filetype plugin indent on
+set number
+set spell
+setlocal spell spelllang=en_us
+" At least let yourself know what mode you're in
+set showmode
+set incsearch
+
+"Disactive automatic LaTeX Plugin for Vim 
+let g:no_atp=1
