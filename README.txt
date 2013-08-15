@@ -11,6 +11,15 @@ Install new module:
 
     git submodule add https://github.com/username/mymodule.git bundle/mymodule/
 
+Update a plugin module:
+
+    cd ~/.vim/bundle/module/
+    git pull origin master
+
+Update all plugin modules:
+
+    git submodule foreach git pull origin master
+
 Remove installed module (from http://davidwalsh.name/git-remove-submodule):
 
     delete relevant section from .gitmodules file
@@ -25,3 +34,7 @@ Switch to the `~/.vim` directory, and fetch submodules:
     cd ~/.vim
     git submodule init
     git submodule update
+
+Ignore Changes in git submodules:
+
+    add ignore = dirty in .gitmodules to each section
