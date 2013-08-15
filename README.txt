@@ -32,8 +32,7 @@ Remove installed module (from http://davidwalsh.name/git-remove-submodule):
 Switch to the `~/.vim` directory, and fetch submodules:
 
     cd ~/.vim
-    git submodule init
-    git submodule update
+    git submodule update --init
 
 Ignore Changes in git submodules:
 

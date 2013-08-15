@@ -29,6 +29,13 @@ set wrap
 set textwidth=60
 set sw=2
 
+if has('gui_running')
+  set background=light
+else
+  set background=dark
+endif
+colorscheme solarized
+
 "Disactive automatic LaTeX Plugin for Vim 
 let g:no_atp=1
 
