@@ -44,6 +44,12 @@ colorscheme solarized
 "Disactive automatic LaTeX Plugin for Vim 
 let g:no_atp=1
 
+" EASYMOTION SETTINGS
+let g:EasyMotion_leader_key = '<Leader>'
+
+"NERDTree
+map <F2> :NERDTreeToggle<CR>
+
 " VIM-LATEX SETTINGS
 " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
