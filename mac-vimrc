@@ -34,11 +34,7 @@ if has('gui_running')
   if has('gui_macvim')
     set guifont=Menlo:h12
   else
-<<<<<<< HEAD
-    "set guifont=Monospace:h10
-=======
     "set guifont=Monospace:h12
->>>>>>> a7eb6580c55eb688c4eb0c0902d644385f20c574
   endif
 else
   set background=dark
