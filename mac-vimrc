@@ -34,7 +34,11 @@ if has('gui_running')
   if has('gui_macvim')
     set guifont=Menlo:h12
   else
+<<<<<<< HEAD
     "set guifont=Monospace:h10
+=======
+    "set guifont=Monospace:h12
+>>>>>>> a7eb6580c55eb688c4eb0c0902d644385f20c574
   endif
 else
   set background=dark
@@ -43,6 +47,12 @@ colorscheme solarized
 
 "Disactive automatic LaTeX Plugin for Vim 
 let g:no_atp=1
+
+" EASYMOTION SETTINGS
+let g:EasyMotion_leader_key = '<Leader>'
+
+"NERDTree
+map <F2> :NERDTreeToggle<CR>
 
 " VIM-LATEX SETTINGS
 " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
