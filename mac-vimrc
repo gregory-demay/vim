@@ -22,17 +22,20 @@ set wildmenu
 " Show partial commands in the last line of the screen
 set showcmd
 
+"show the line and column number of the cursor position
+set ruler
+
 set incsearch
 set hlsearch
 
-set wrap linebreak
-set nolist
-let &showbreak="\u21aa"
-set tabstop=4
+"set wrap linebreak
+"set nolist
+"let &showbreak="\u21aa"
+"set tabstop=4
 "set expandtab
-set shiftwidth=2
-set softtabstop=2
-set smartindent
+"set shiftwidth=2
+"set softtabstop=2
+"set smartindent
 
 set textwidth=60
 set formatoptions=tcq
@@ -55,3 +58,6 @@ map <F2> :NERDTreeToggle<CR>
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
+
+imap <D-j> <Plug>IMAP_JumpForward
+nmap <D-j> <Plug>IMAP_JumpForward
