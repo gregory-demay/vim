@@ -25,20 +25,20 @@ set showcmd
 set incsearch
 set hlsearch
 
-set wrap
-set textwidth=60
-set sw=2
+set wrap linebreak
+set nolist
+let &showbreak="\u21aa"
+set tabstop=4
+"set expandtab
+set shiftwidth=2
+set softtabstop=2
+set smartindent
 
-if has('gui_running')
-  set background=light
-  if has('gui_macvim')
-    set guifont=Menlo:h12
-  else
-    "set guifont=Monospace:h12
-  endif
-else
-  set background=dark
-endif
+set textwidth=60
+set formatoptions=tcq
+set wrapmargin=0
+
+set background=dark
 colorscheme solarized
 
 "Disactive automatic LaTeX Plugin for Vim 
