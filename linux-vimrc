@@ -1,0 +1,67 @@
+runtime bundle/pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+"call pathogen#runtime_append_all_bundles()
+"call pathogen#helptags()
+
+"bash shell, to share the same $PATH
+set shell=bash
+
+syntax on
+filetype plugin indent on
+set autoindent
+set number
+
+set encoding=utf-8
+language mes en_US
+set langmenu=en_US.UTF-8
+set spell
+setlocal spell spelllang=en_us
+
+" At least let yourself know what mode you're in
+set showmode
+
+" Better command-line completion
+set wildmenu
+
+" Show partial commands in the last line of the screen
+set showcmd
+
+"show the line and column number of the cursor position
+set ruler
+
+set incsearch
+set hlsearch
+
+"set wrap linebreak
+"set nolist
+let &showbreak="\u21aa"
+set tabstop=2
+"set expandtab
+set shiftwidth=1
+"set softtabstop=2
+"set smartindent
+
+set textwidth=60
+"set formatoptions=tcq
+"set wrapmargin=0
+
+set background=dark
+colorscheme solarized
+
+"Disactive automatic LaTeX Plugin for Vim 
+let g:no_atp=1
+
+" EASYMOTION SETTINGS
+let g:EasyMotion_leader_key = '<Leader>'
+
+"NERDTree
+map <F2> :NERDTreeToggle<CR>
+
+"CtrlP
+nmap <C-b> :CtrlPBuffer<CR>
+
+" VIM-LATEX SETTINGS
+" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
+" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
+" The following changes the default filetype back to 'tex':
+let g:tex_flavor='latex'
