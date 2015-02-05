@@ -19,6 +19,8 @@ setlocal spell spelllang=en_us
 
 " At least let yourself know what mode you're in
 set showmode
+" never hide status line
+set laststatus=2
 
 " Better command-line completion
 set wildmenu
