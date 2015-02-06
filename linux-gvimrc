@@ -1,4 +1,9 @@
 if has('gui_running')
   set background=light
+ if has("gui_macvim")
+	set guifont=Inconsolata\ for\ Powerline:h13
+ else
 	set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 10.5
+ endif
 endif
+
