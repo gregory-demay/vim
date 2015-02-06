@@ -1,1 +1,0 @@
-bundle/vim-latex/ftplugin/tex.vim
