@@ -1,4 +1,4 @@
 if has('gui_running')
   set background=light
-  set guifont=Monospace\ 9
+	set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 10.5
 endif
