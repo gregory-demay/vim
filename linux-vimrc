@@ -1,5 +1,7 @@
 runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
+"Force doc tags generation upon start up
+"Helptags
 "call pathogen#runtime_append_all_bundles()
 "call pathogen#helptags()
 
@@ -19,28 +21,6 @@ setlocal spell spelllang=en_us
 
 " At least let yourself know what mode you're in
 set showmode
-" never hide status line
-set laststatus=2
-"populate the g:airline_symbols dictionary with the powerline symbols.
-let g:airline_powerline_fonts = 1
-"The powerline font symbols are partially messed up
-if !exists('g:airline_symbols')
- let g:airline_symbols = {}
-endif
-" unicode symbols
-"let g:airline_symbols.space = "\ua0"
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
 
 " Better command-line completion
 set wildmenu
@@ -56,6 +36,7 @@ set hlsearch
 
 "set wrap linebreak
 "set nolist
+"show line break
 let &showbreak="\u21aa"
 set tabstop=2
 "set expandtab
@@ -70,20 +51,57 @@ set textwidth=60
 set background=dark
 colorscheme solarized
 
+"goes to previous buffer
+nmap <C-S-Tab> :bprevious<CR>
+"goes to next buffer
+nmap <C-Tab> :bnext<CR>
+
+
+"	--------------------------------------------------
+"	--------------------------------------------------
+"	PLUGINS
+"	--------------------------------------------------
+"	--------------------------------------------------
+
+"	--------------------------------------------------
+"	AUTOMATIC LATEX PLUGIN
+"	--------------------------------------------------
 "Disactive automatic LaTeX Plugin for Vim 
 let g:no_atp=1
 
-" EASYMOTION SETTINGS
-let g:EasyMotion_leader_key = '<Leader>'
-
-"NERDTree
-map <F2> :NERDTreeToggle<CR>
-
-"CtrlP
+"	--------------------------------------------------
+"	CtrlP
+"	--------------------------------------------------
+"	open list of buffers
 nmap <C-b> :CtrlPBuffer<CR>
 
-" VIM-LATEX SETTINGS
+"	--------------------------------------------------
+"	EASYMOTION
+"	--------------------------------------------------
+"	change easymotion leader
+let g:EasyMotion_leader_key = '<Leader>'
+
+"	--------------------------------------------------
+"	NERDTree
+"	--------------------------------------------------
+"	open NERDTree window
+map <F2> :NERDTreeToggle<CR>
+
+"	--------------------------------------------------
+"	VIM-AIRLINE
+"	--------------------------------------------------
+" never hide status line
+set laststatus=2
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+"populate the g:airline_symbols dictionary with the powerline symbols.
+let g:airline_powerline_fonts = 1
+
+"	--------------------------------------------------
+"	VIM-LATEX SETTINGS
+"	--------------------------------------------------
 " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
+
