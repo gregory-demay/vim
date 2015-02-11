@@ -5,6 +5,18 @@ execute pathogen#infect()
 "call pathogen#runtime_append_all_bundles()
 "call pathogen#helptags()
 
+"	--------------------------------------------------
+"	FUNCTION TO DETECT WHEN ON OS X
+"	--------------------------------------------------
+fu! IsMAC()
+ let os=substitute(system('uname'), '\n', '', '')
+ if os == 'Darwin'
+	return 1
+ endif
+ return 0
+endfunction
+
+
 "bash shell, to share the same $PATH
 set shell=bash
 
@@ -64,12 +76,6 @@ nmap <C-Tab> :bnext<CR>
 "	--------------------------------------------------
 
 "	--------------------------------------------------
-"	AUTOMATIC LATEX PLUGIN
-"	--------------------------------------------------
-"Disactive automatic LaTeX Plugin for Vim 
-let g:no_atp=1
-
-"	--------------------------------------------------
 "	CtrlP
 "	--------------------------------------------------
 "	open list of buffers
@@ -104,4 +110,12 @@ let g:airline_powerline_fonts = 1
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
+
+"MAC specific settings
+if IsMAC()
+ "use Command+j to jump space holders
+ imap <D-j> <Plug>IMAP_JumpForward
+endif
+
+
 
