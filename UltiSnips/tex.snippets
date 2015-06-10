@@ -28,25 +28,38 @@ $0
 endsnippet
 
 #-----------------------------------------------------------
+#-----------------------EQUATIONS----------------------------
+#-----------------------------------------------------------
+
+snippet $ "inline math $ $" i
+$${VISUAL}$1$$0
+endsnippet
+
+
+#-----------------------------------------------------------
 #-----------------------BRACKETS----------------------------
 #-----------------------------------------------------------
 
-snippet (( "\left(\right)"
+snippet { "curly brackets {}" i
+{${VISUAL}$1}$0
+endsnippet
+
+snippet (( "\left(\right)" i
 \left(${VISUAL}$1\right)$0
 endsnippet
 
-snippet [[ "\left[\right]"
+snippet [[ "\left[\right]" i
 \left[${VISUAL}$1\right]$0
 endsnippet
 
-snippet {{ "\left\{\right\}"
+snippet {{ "\left\{\right\}" i
 \left\{${VISUAL}$1\right\}$0
 endsnippet
 
-snippet floor "\lfloor\rfloor"
+snippet floor "\lfloor\rfloor" i
 \lfloor${VISUAL}$1\rfloor$0
 endsnippet
 
-snippet ceil "\lceil\rceil"
+snippet ceil "\lceil\rceil" i
 \lceil${VISUAL}$1\rceil$0
 endsnippet
