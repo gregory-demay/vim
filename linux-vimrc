@@ -124,3 +124,9 @@ let g:airline_powerline_fonts = 1
 let g:LatexBox_latexmk_preview_continuously=1
 let g:LatexBox_quickfix=2
 
+if IsMAC()
+"LINUX specific settings
+else
+ let g:LatexBox_viewer="okular"
+endif
+

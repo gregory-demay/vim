@@ -1,3 +1,52 @@
-snippet ((
-\left($1\right)$0
+#-----------------------------------------------------------
+#-----------------------SECTIONS----------------------------
+#-----------------------------------------------------------
+
+snippet chap "\chapter{}" b
+\chapter{${VISUAL}$1}
+\label{chap:$2}
+
+$0
+endsnippet
+snippet sec "\section{}" b
+\section{${VISUAL}$1}
+\label{sec:$2}
+
+$0
+endsnippet
+
+snippet sub "\subsection{}" b
+\subsection{${VISUAL}$1}
+\label{subsec:$2}
+
+$0
+endsnippet
+
+snippet par "\paragraph{}" b
+\paragraph{${VISUAL}$1}
+$0
+endsnippet
+
+#-----------------------------------------------------------
+#-----------------------BRACKETS----------------------------
+#-----------------------------------------------------------
+
+snippet (( "\left(\right)"
+\left(${VISUAL}$1\right)$0
+endsnippet
+
+snippet [[ "\left[\right]"
+\left[${VISUAL}$1\right]$0
+endsnippet
+
+snippet {{ "\left\{\right\}"
+\left\{${VISUAL}$1\right\}$0
+endsnippet
+
+snippet floor "\lfloor\rfloor"
+\lfloor${VISUAL}$1\rfloor$0
+endsnippet
+
+snippet ceil "\lceil\rceil"
+\lceil${VISUAL}$1\rceil$0
 endsnippet
