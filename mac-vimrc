@@ -13,6 +13,12 @@ language mes en_US
 set spell
 setlocal spell spelllang=en_us
 
+"no bell
+set noerrorbells 
+set novisualbell
+set t_vb=
+autocmd! GUIEnter * set vb t_vb=
+
 " At least let yourself know what mode you're in
 set showmode
 
@@ -25,30 +31,34 @@ set showcmd
 "show the line and column number of the cursor position
 set ruler
 
+"enable emmet plugin only for html and css files
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
 set incsearch
 set hlsearch
 
-"set wrap linebreak
-"set nolist
-"let &showbreak="\u21aa"
-"set tabstop=4
-"set expandtab
-"set shiftwidth=2
-"set softtabstop=2
-"set smartindent
-
 set textwidth=60
-set formatoptions=tcq
-set wrapmargin=0
+set ts=2
+set sw=1
 
-set background=dark
+if has('gui_running')
+  set background=light
+  if has('gui_macvim')
+    set guifont=Menlo:h12
+  else
+    "set guifont=Monospace:h12
+  endif
+else
+  set background=dark
+endif
 colorscheme solarized
 
 "Disactive automatic LaTeX Plugin for Vim 
 let g:no_atp=1
 
 " EASYMOTION SETTINGS
-let g:EasyMotion_leader_key = '<Leader>'
+"let g:EasyMotion_leader_key = '<Leader>'
 
 "NERDTree
 map <F2> :NERDTreeToggle<CR>
