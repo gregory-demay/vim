@@ -98,6 +98,16 @@ let g:EasyMotion_leader_key = '<Leader>'
 map <F2> :NERDTreeToggle<CR>
 
 "	--------------------------------------------------
+"	ULTISNIPS SETTINGS
+"	--------------------------------------------------
+"MAC specific settings
+if IsMAC()
+ let g:UltiSnipsExpandTrigger="<tab>"
+ let g:UltiSnipsJumpForwardTrigger="<D-j>"
+ let g:UltiSnipsJumpBackwardTrigger="<D-k>"
+endif
+
+"	--------------------------------------------------
 "	VIM-AIRLINE
 "	--------------------------------------------------
 " never hide status line
@@ -107,19 +117,10 @@ let g:airline#extensions#tabline#enabled = 1
 "populate the g:airline_symbols dictionary with the powerline symbols.
 let g:airline_powerline_fonts = 1
 
+
 "	--------------------------------------------------
-"	VIM-LATEX SETTINGS
+"	LATEX-BOX SETTINGS
 "	--------------------------------------------------
-" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
-" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
-" The following changes the default filetype back to 'tex':
-let g:tex_flavor='latex'
-
-"MAC specific settings
-if IsMAC()
- "use Command+j to jump space holders
- imap <D-j> <Plug>IMAP_JumpForward
-endif
-
-
+let g:LatexBox_latexmk_preview_continuously=1
+let g:LatexBox_quickfix=2
 
