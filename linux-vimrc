@@ -46,6 +46,10 @@ set ruler
 set incsearch
 set hlsearch
 
+"Prevent from entering Ex mode in vim when typing Q
+"http://www.bestofvim.com/tip/leave-ex-mode-good/
+nnoremap Q <nop>
+
 "set wrap linebreak
 "set nolist
 "show line break
