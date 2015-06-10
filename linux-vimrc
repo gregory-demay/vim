@@ -94,6 +94,16 @@ let g:EasyMotion_leader_key = '<Leader>'
 map <F2> :NERDTreeToggle<CR>
 
 "	--------------------------------------------------
+"	ULTISNIPS SETTINGS
+"	--------------------------------------------------
+"MAC specific settings
+if IsMAC()
+ let g:UltiSnipsExpandTrigger="<tab>"
+ let g:UltiSnipsJumpForwardTrigger="<D-j>"
+ let g:UltiSnipsJumpBackwardTrigger="<D-k>"
+endif
+
+"	--------------------------------------------------
 "	VIM-AIRLINE
 "	--------------------------------------------------
 " never hide status line
