@@ -31,9 +31,9 @@ endsnippet
 #-----------------------EQUATIONS----------------------------
 #-----------------------------------------------------------
 
-snippet $ "inline math $ $" i
-$${VISUAL}$1$$0
-endsnippet
+#snippet $ "inline math $ $" i
+#$${VISUAL}$1$$0
+#endsnippet
 
 
 #-----------------------------------------------------------
@@ -63,3 +63,12 @@ endsnippet
 snippet ceil "\lceil\rceil" i
 \lceil${VISUAL}$1\rceil$0
 endsnippet
+
+
+
+snippet newc "\newcommand" b
+%${1:description}
+\newcommand{\\${2:name}}[${3:NumberArgs}][${4:defaultValue}]{${5:stuff}}
+$0
+endsnippet
+
