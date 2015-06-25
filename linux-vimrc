@@ -46,23 +46,14 @@ set ruler
 set incsearch
 set hlsearch
 
+set textwidth=60
+
+"automatic reformatting
+set formatoptions=ant
+
 "Prevent from entering Ex mode in vim when typing Q
 "http://www.bestofvim.com/tip/leave-ex-mode-good/
 nnoremap Q <nop>
-
-"set wrap linebreak
-"set nolist
-"show line break
-let &showbreak="\u21aa"
-set tabstop=2
-"set expandtab
-set shiftwidth=1
-"set softtabstop=2
-"set smartindent
-
-set textwidth=60
-"set formatoptions=tcq
-"set wrapmargin=0
 
 set background=dark
 colorscheme solarized
@@ -71,6 +62,22 @@ colorscheme solarized
 nmap <C-S-Tab> :bprevious<CR>
 "goes to next buffer
 nmap <C-Tab> :bnext<CR>
+
+"	--------------------------------------------------
+"	INVISIBLE CHARACTERS
+"	--------------------------------------------------
+" Show invisible characters like tabstops and end of line
+" http://vimcasts.org/episodes/show-invisibles/
+" Shortcut to rapidly toggle `set list`
+ "nmap <leader>l :set list!<CR>
+ set list
+
+" Use the same symbols as TextMate for tabstops and EOLs
+ set listchars=tab:▸\ ,eol:⏎
+
+"Invisible character colors 
+highlight NonText guifg=#93a1a1
+highlight SpecialKey guifg=#93a1a1
 
 
 "	--------------------------------------------------
@@ -121,6 +128,9 @@ let g:airline_powerline_fonts = 1
 "	--------------------------------------------------
 let g:LatexBox_latexmk_preview_continuously=1
 let g:LatexBox_quickfix=2
+let g:LatexBox_custom_indent = 0
+let g:tex_indent_brace = 0
+let g:tex_indent_items = 0
 
 if IsMAC()
 "LINUX specific settings

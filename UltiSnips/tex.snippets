@@ -40,10 +40,6 @@ endsnippet
 #-----------------------BRACKETS----------------------------
 #-----------------------------------------------------------
 
-snippet { "curly brackets {}" i
-{${VISUAL}$1}$0
-endsnippet
-
 snippet (( "\left(\right)" i
 \left(${VISUAL}$1\right)$0
 endsnippet
@@ -53,7 +49,7 @@ snippet [[ "\left[\right]" i
 endsnippet
 
 snippet {{ "\left\{\right\}" i
-\left\{${VISUAL}$1\right\}$0
+\left\\{${VISUAL}$1\right\\}$0
 endsnippet
 
 snippet floor "\lfloor\rfloor" i
@@ -65,6 +61,40 @@ snippet ceil "\lceil\rceil" i
 endsnippet
 
 
+#-----------------------------------------------------------
+#---------------------ENVIRONMENTS--------------------------
+#-----------------------------------------------------------
+snippet env "\begin{env}" b
+\begin{${VISUAL}$1}
+ $2
+\end{$1}
+$0
+endsnippet
+
+snippet def "definition env" b
+\begin{definition}
+ \label{def:$1}
+ ${VISUAL}$2
+\end{definition}
+$0
+endsnippet
+
+snippet eqs "equation* env" b
+\begin{equation*}
+ ${VISUAL}$1
+\end{equation*}
+$0
+endsnippet
+
+
+#-----------------------------------------------------------
+#-----------------------COMMANDS----------------------------
+#-----------------------------------------------------------
+
+
+snippet c "\command{}" i
+\\${VISUAL}$1{$2}$0
+endsnippet
 
 snippet newc "\newcommand" b
 %${1:description}
