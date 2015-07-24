@@ -5,13 +5,13 @@ execute pathogen#infect()
 "call pathogen#runtime_append_all_bundles()
 "call pathogen#helptags()
 
-"	--------------------------------------------------
-"	FUNCTION TO DETECT WHEN ON OS X
-"	--------------------------------------------------
+"--------------------------------------------------
+"FUNCTION TO DETECT WHEN ON OS X
+"--------------------------------------------------
 fu! IsMAC()
  let os=substitute(system('uname'), '\n', '', '')
  if os == 'Darwin'
-	return 1
+	 return 1
  endif
  return 0
 endfunction
@@ -46,10 +46,16 @@ set ruler
 set incsearch
 set hlsearch
 
-set textwidth=60
+set textwidth=80
+"tabs are replaces by spaces
+set expandtab
+"tabs = amount of spaces
+set tabstop=2
+set shiftwidth=1
+set softtabstop=2
 
-"automatic reformatting
-set formatoptions=ant
+"reformatting
+set formatoptions=tcq
 
 "Prevent from entering Ex mode in vim when typing Q
 "http://www.bestofvim.com/tip/leave-ex-mode-good/
@@ -95,8 +101,7 @@ nmap <C-b> :CtrlPBuffer<CR>
 "	--------------------------------------------------
 "	EASYMOTION
 "	--------------------------------------------------
-"	change easymotion leader
-let g:EasyMotion_leader_key = '<Leader>'
+map <Leader> <Plug>(easymotion-prefix)
 
 "	--------------------------------------------------
 "	NERDTree
